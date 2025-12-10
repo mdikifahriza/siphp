@@ -1,0 +1,44 @@
+-- Insert data Alasan
+INSERT INTO "public"."alasan" ("id", "nama") VALUES 
+('1', 'Bencana'), 
+('2', 'Dibongkar'), 
+('3', 'Dipindahtangankan'), 
+('4', 'Disita'), 
+('5', 'Koreksi Data');
+
+-- Insert data Users
+INSERT INTO "public"."users" ("id", "nama", "email", "password_hash", "role", "created_at", "updated_at") VALUES 
+('3b092bbd-b605-4078-ac3b-dc662d3c8bd9', 'M. Diki Fahriza', 'mdikifahriza3@gmail.com', '$2a$12$cEPtpfDMy59RSI23iGtf4u4TI9dmWbGI.AskAz7gumyaQ4JY7UIhG', 'admin', '2025-12-09 04:54:39.038247+00', '2025-12-09 04:54:39.038247+00'), 
+('aa89d2db-6124-454f-8d25-d215d4460937', 'Zainur Rojikin', 'zainur@gmail.com', '$2b$12$lrme8MNi25XHv71HFE/z4eMfS8hjk3GPUaNeJRKKRo5.vRrCnO03.', 'user', '2025-12-09 15:44:35.524634+00', '2025-12-09 15:58:13.137+00');
+
+-- Insert data TTD (Tanda Tangan)
+INSERT INTO "public"."ttd" ("id", "jabatan", "nama", "foto_ttd") VALUES 
+('1', 'Kepala Sekolah', 'Prof. Dr. (HC) Dr. Ir. H. M. Diki Fahriza, S,SI, S.H, S,Kom, MH, P.hdd', 'https://fljmfuxwmrgrnytkprum.supabase.co/storage/v1/object/public/ttd/1765276771542-egjbzn.png'), 
+('2', 'Waka Sarpras', 'Dr. Jovanda Kelvin Wibawa Putra S.Kom, SH.,', 'https://fljmfuxwmrgrnytkprum.supabase.co/storage/v1/object/public/ttd/1765277065119-lyklf.png'), 
+('3', 'Pelaksana', 'Dr. H. Muhammad Umam Khoiruddin S.H., MH', 'https://fljmfuxwmrgrnytkprum.supabase.co/storage/v1/object/public/ttd/1765277119508-pjuqn.png');
+
+-- Insert data Sarpras
+INSERT INTO "public"."sarpras" ("id", "spesifikasi", "tahun", "umur", "sumber_dana", "alasan", "created_at", "jumlah") VALUES 
+('1', 'Sapu', '2023', '2', 'Pemerintah', '2', '2025-12-09 12:21:05.789706+00', '30'), 
+('2', 'Kemoceng', '2015', '9', 'Pemerintah', '4', '2025-12-09 12:21:33.342453+00', '20'), 
+('3', 'rak', '2015', '10', 'Sekolah', '2', '2025-12-09 23:03:37.927289+00', '1');
+
+-- Insert data Berita Acara
+INSERT INTO "public"."berita_acara" ("id", "hari", "tanggal", "bulan", "tahun", "tempat") VALUES 
+('1', 'Senin', '30', 'November', '2025', 'Ruang'), 
+('2', 'Senin', '29', 'Desember', '2121', 'ruanasn');
+
+-- Insert data Berita Acara Barang
+INSERT INTO "public"."berita_acara_barang" ("id", "berita_acara_id", "sarpras_id") VALUES 
+('24', '2', '2'), 
+('31', '1', '1'), 
+('32', '1', '2');
+
+-- Insert data Berita Acara TTD
+INSERT INTO "public"."berita_acara_ttd" ("id", "berita_acara_id", "ttd_id") VALUES 
+('40', '2', '2'), 
+('41', '2', '3'), 
+('42', '2', '1'), 
+('52', '1', '3'), 
+('53', '1', '2'), 
+('54', '1', '1');
