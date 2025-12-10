@@ -75,8 +75,6 @@ Upload file tanda tangan dan logo bila diperlukan.
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY
-
 SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
 JWT_SECRET=your_random_secret_key
 ```
