@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📘 README — Panduan Menjalankan Proyek Web
 
-## Getting Started
+Dokumen ini menjelaskan langkah lengkap untuk menyiapkan dan menjalankan aplikasi web menggunakan Supabase + Next.js secara lokal.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 🚀 1. Download & Ekstrak Proyek
+
+1. Buka repository GitHub.
+2. Klik tombol **Code → Download ZIP**.
+3. Ekstrak ZIP ke folder mana pun.
+
+Contoh:
+
+```
+C:\project-saya\
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🗄️ 2. Membuat Database Baru di Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Masuk ke [https://supabase.com/dashboard](https://supabase.com/dashboard)
+2. Klik **New Project**
+3. Pilih organisasi → buat project baru
+4. Tunggu proses provisioning selesai
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# 📑 3. Menyalin Struktur Database (`schema.txt`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Buka file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/schema.txt
+```
 
-## Deploy on Vercel
+2. Copy seluruh isi file.
+3. Masuk ke **Supabase Dashboard → SQL Editor**.
+4. Klik **New Query**.
+5. Paste isi schema.
+6. Klik **Run**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Hasilnya:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Tabel terbentuk
+* Relasi siap
+* Data awal (jika ada) masuk
+
+---
+
+# 🗂️ 4. Membuat Storage Bucket
+
+Masuk ke **Storage → Buckets**, lalu buat dua bucket berikut:
+
+### Bucket 1: `ttd`
+
+* Klik **New Bucket**
+* Nama bucket: `ttd`
+* Public: **Yes**
+
+### Bucket 2: `logo`
+
+* Klik **New Bucket**
+* Nama bucket: `logo`
+* Public: **Yes**
+
+Upload file tanda tangan dan logo bila diperlukan.
+
+---
+
+# 🔐 5. Mengatur Environment (`.env.local`)
+
+1. Buat file `.env.local` di root project.
+2. Isi dengan:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY
+
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
+JWT_SECRET=your_random_secret_key
+```
+
+### Cara mendapatkan value:
+
+* Masuk **Project Settings → API**
+
+  * `Project URL` → untuk `NEXT_PUBLIC_SUPABASE_URL`
+  * `anon` key → untuk `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  * `service_role` → untuk `SUPABASE_SERVICE_ROLE_KEY`
+
+Jika salah satu value keliru, fitur login/CRUD akan gagal.
+
+---
+
+# 👥 6. Default Akun Login
+
+### Admin
+
+```
+Email: mdikifahriza3@gmail.com
+Password: 123
+```
+
+### User
+
+```
+Email: zainur@gmail.com
+Password: 123456
+```
+
+---
+
+# ▶️ 7. Menjalankan Aplikasi
+
+Buka terminal di folder project.
+
+### Install dependencies
+
+```
+npm install
+```
+
+### Jalankan development server
+
+```
+npm run dev
+```
+
+Akses melalui:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🎯 8. Aplikasi Siap Digunakan
+
+Jika langkah-langkah di atas benar:
+
+* Login admin dan user berjalan
+* CRUD berfungsi
+* Upload bucket bekerja
+* PDF generator aktif
+
+Jika ada error, periksa kembali environment atau beri tahu bagian yang bermasalah.
