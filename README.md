@@ -26,12 +26,12 @@ C:\project-saya\
 
 ---
 
-# 📑 3. Menyalin Struktur Database (`schema.txt`)
+# 📑 3. Menyalin Struktur Database (`skema.txt`)
 
 1. Buka file:
 
 ```
-/schema.txt
+/skema.txt
 ```
 
 2. Copy seluruh isi file.
