@@ -94,14 +94,14 @@ export default function DashboardPage() {
   const quickActions = [
     {
       name: "Kelola Berita Acara",
-      href: "/dashboard/berita_acara",
+      href: "/berita_acara",
       icon: "📄",
       description: "Buat dan kelola berita acara",
       color: "from-blue-500 to-blue-600",
     },
     {
       name: "Kelola Barang",
-      href: "/dashboard/barang",
+      href: "/sarpras",
       icon: "📦",
       description: "Tambah dan edit data barang",
       color: "from-green-500 to-green-600",
@@ -192,4 +192,5 @@ export default function DashboardPage() {
       </div>
     </div>
   );
+
 }
