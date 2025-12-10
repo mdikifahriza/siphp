@@ -58,22 +58,6 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </Link>
-
-        {/* Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8">
-          <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-            <div className="text-3xl mb-2">🔒</div>
-            <p className="text-white text-sm font-medium">Aman & Terpercaya</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-            <div className="text-3xl mb-2">⚡</div>
-            <p className="text-white text-sm font-medium">Cepat & Efisien</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-            <div className="text-3xl mb-2">📊</div>
-            <p className="text-white text-sm font-medium">Terintegrasi</p>
-          </div>
-        </div>
       </div>
     </main>
   )
